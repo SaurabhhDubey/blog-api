@@ -1,0 +1,29 @@
+{
+  "name": "blog-api",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "��#\u0000 \u0000b\u0000l\u0000o\u0000g\u0000-\u0000a\u0000p\u0000i\u0000\r\u0000 \u0000",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaurabhhDubey/blog-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaurabhhDubey/blog-api/issues"
+  },
+  "homepage": "https://github.com/SaurabhhDubey/blog-api#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.3"
+  }
+}
