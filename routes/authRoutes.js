@@ -33,3 +33,23 @@ router.post("/register", async(req , res )=>{
 });
 
 // login 
+
+router.post("/login" , async (req , res)=>{
+
+    try{
+    const {email , password} = req.body;
+    const user = await User.findOne({email});
+    if (!user) res.status(400).json({message:"invalid user"});
+    const validPassword = await bcrypt.compare(password , user.password);
+     if (!validPassword)
+      return res.status(400).json({ message: "Invalid email or password" });
+     
+     const token = jwt.sign({id:user.id} , process.env.JWT_SECRET , {expiresIn:"1h",});
+     res.json({ message: "Login successful", token });
+
+
+    }
+    catch(error){
+        res.status(500).json({message:"server error", error});
+    }
+});
